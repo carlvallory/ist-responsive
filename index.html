@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IST - Ingeniería, Servicio y Tecnología</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ist-blue: #024F7C;
+            --ist-cyan: #0CE5F8;
+            --ist-gold: #B58935;
+            --ist-gold-dark: #B68936;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 24px;
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 80vh;
+        }
+
+        .hero-background {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right bottom, var(--ist-blue), #025C88, var(--ist-cyan));
+            background-image: url('assets/image/fondo_1.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            z-index: 1;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            inset: 0;
+            opacity: 0.2;
+            background-image: radial-gradient(circle at 20px 20px, rgba(255,255,255,0.3) 2px, transparent 2px);
+            background-size: 40px 40px;
+        }
+
+        /* Navigation */
+        .nav {
+            position: relative;
+            z-index: 10;
+            padding: 24px 0;
+            font-size: 1.25em
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.01);
+            backdrop-filter: blur(1px);
+            border-radius: 8px;
+            padding: 16px 32px;
+            gap: 32px;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.15s ease;
+            padding: 8px 24px;
+        }
+
+        .nav-link:hover {
+            color: var(--ist-cyan);
+        }
+
+        .nav-link.active {
+            background: var(--ist-gold);
+            padding: 8px 24px;
+            border-radius: 8px;
+        }
+
+        .nav-link.active:hover {
+            color: white;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            z-index: 20;
+            background: none;
+            border: none;
+            color: white;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .hamburger span {
+            width: 32px;
+            height: 4px;
+            background: white;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger span:last-child {
+            width: 24px;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: var(--ist-blue);
+            z-index: 15;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        .mobile-menu .nav-link {
+            font-size: 24px;
+        }
+
+        /* Hero Content */
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            color: white;
+            text-align: center;
+            padding: 64px 0;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .logo {
+            margin-bottom: 48px;
+        }
+
+        .logo svg {
+            width: 349px;
+            height: auto;
+        }
+
+        .hero-title {
+            font-size: 38px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            color: var(--ist-cyan);
+            margin-bottom: 64px;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 64px 0;
+        }
+
+        /* Technology Section */
+        .tech-section {
+            margin-bottom: 80px;
+        }
+
+        .tech-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+
+        .accent-line {
+            width: 14px;
+            height: 530px;
+            background: var(--ist-gold);
+            border-radius: 9px;
+            flex-shrink: 0;
+            margin-top: 8px;
+        }
+
+        .tech-text h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 160px;
+            font-weight: 400;
+            color: var(--ist-blue);
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+
+        .tech-text p {
+            font-size: 75px;
+            color: var(--ist-blue);
+            line-height: 1.2;
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 100px;
+            font-weight: 400;
+            color: var(--ist-gold);
+            margin-bottom: 16px;
+        }
+
+        .title-underline {
+            width: 700px;
+            height: 18px;
+            background: linear-gradient(to right, var(--ist-cyan), var(--ist-blue));
+            margin: 0 auto;
+            border-radius: 9px;
+        }
+
+        .title-underline.half {
+            width: 430px
+        }
+
+        /* Content Sections */
+        .content-section {
+            margin-bottom: 80px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .content-text {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .content-text p {
+            font-size: 35px;
+            color: #374151;
+            line-height: 1.7;
+        }
+
+        .content-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Mission and Vision */
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 200px;
+            margin-bottom: 80px;
+        }
+
+        .mission-card, .vision-card {
+            text-align: center;
+        }
+
+        .card-header {
+            background: linear-gradient(to right, var(--ist-cyan), var(--ist-blue));
+            border-radius: 8px;
+            padding: 8px 0 4px;
+            margin: 0 100px 24px;
+        }
+
+        .card-header h4 {
+            font-size: 60px;
+            font-weight: bold;
+            color: white;
+            line-height: 1.25;
+        }
+
+        .card-content p {
+            font-size: 35px;
+            color: #374151;
+            line-height: 1.7;
+            text-align: left;
+        }
+
+        /* Values Section */
+        .values-grid {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 32px 120px;
+        }
+
+        .value-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .value-text {
+            line-height: 2;
+            font-size: 35px;
+            color: #374151;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--ist-blue);
+            color: white;
+            padding: 32px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .footer-logo {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-logo svg {
+            width: 128px;
+            height: auto;
+        }
+
+        .footer-logo img {
+            width: 128px;
+            height: auto;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.15s ease;
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .tech-text h2 {
+                font-size: 48px;
+            }
+
+            .tech-text p {
+                font-size: 24px;
+            }
+
+            .section-title {
+                font-size: 40px;
+            }
+
+            .content-grid {
+                gap: 32px;
+            }
+
+            .mission-vision {
+                gap: 24px;
+            }
+
+            .card-header {
+                padding: 24px;
+            }
+
+            .card-header h4 {
+                font-size: 28px;
+            }
+
+            .values-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .hero-content {
+                padding: 32px 0;
+                min-height: 60vh;
+            }
+
+            .logo svg {
+                width: 180px;
+            }
+
+            .hero-title {
+                font-size: 20px;
+            }
+
+            .hero-subtitle {
+                font-size: 16px;
+            }
+
+            .tech-content {
+                gap: 24px;
+            }
+
+            .accent-line {
+                height: 120px;
+            }
+
+            .tech-text h2 {
+                font-size: 32px;
+            }
+
+            .tech-text p {
+                font-size: 18px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .title-underline {
+                width: 96px;
+                height: 6px;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .content-text {
+                gap: 24px;
+            }
+
+            .content-text p {
+                font-size: 16px;
+            }
+
+            .mission-vision {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .card-header {
+                padding: 20px;
+            }
+
+            .card-header h4 {
+                font-size: 24px;
+            }
+
+            .card-content p {
+                font-size: 16px;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .value-text {
+                font-size: 16px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .main-content {
+                padding: 32px 0;
+            }
+
+            .content-section {
+                margin-bottom: 48px;
+            }
+
+            .tech-section {
+                margin-bottom: 48px;
+            }
+
+            .mission-vision {
+                margin-bottom: 48px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo svg {
+                width: 160px;
+            }
+
+            .hero-title {
+                font-size: 18px;
+            }
+
+            .hero-subtitle {
+                font-size: 14px;
+            }
+
+            .tech-text h2 {
+                font-size: 28px;
+            }
+
+            .tech-text p {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .content-text p {
+                font-size: 14px;
+            }
+
+            .card-content p {
+                font-size: 14px;
+            }
+
+            .value-text {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Background -->
+        <div class="hero-background">
+            <div class="hero-pattern"></div>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-container">
+                    <div class="nav-menu">
+                        <a href="#" class="nav-link">PRODUCTOS</a>
+                        <a href="#" class="nav-link">SERVICIOS</a>
+                        <a href="#" class="nav-link active">NOSOTROS</a>
+                        <a href="#" class="nav-link">CONTACTO</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#" class="nav-link">PRODUCTOS</a>
+            <a href="#" class="nav-link">SERVICIOS</a>
+            <a href="#" class="nav-link active">NOSOTROS</a>
+            <a href="#" class="nav-link">CONTACTO</a>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <div class="container">
+                <!-- Logo -->
+                <div class="logo">
+                    <svg width="349" height="144" viewBox="0 0 274 114" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_69_236)">
+                            <path d="M115.372 6.41455H97.6215V6.44314C91.9051 6.97915 83.3676 8.74158 75.926 14.6077C72.5084 17.3021 70.8831 19.632 70.4378 20.2924C66.3396 26.3615 66.361 32.7551 66.3753 36.846C66.3895 40.8468 66.4523 46.2441 69.7001 52.0646C71.9333 56.064 74.9628 59.1929 78.7071 61.3627C82.0434 63.2966 85.7335 64.7317 89.6733 65.6293C93.1523 66.4227 96.6498 67.1216 100.102 67.7105C103.297 68.238 106.262 68.9098 108.912 69.7088C110.691 70.2448 112.284 70.7751 113.527 72.2545C114.654 73.5981 114.986 75.1047 115.152 75.8608C115.566 77.7419 115.382 79.5272 115.038 80.6778C114.129 83.7224 110.962 86.1352 106.927 86.9742H39.6339V25.644H51.2766V6.41455H8.79578V25.644H20.4384V86.9714H9.55349V106.201H111.203C111.537 106.158 111.871 106.115 112.204 106.072C112.416 106.005 112.629 105.938 112.843 105.871C118.666 104.594 123.625 102.371 127.649 99.204C134.777 93.5951 138.391 85.6749 138.391 75.665V75.5421C138.391 69.7617 137.353 64.8804 135.302 61.0325C133.239 57.1617 130.429 54.0528 126.95 51.7901C123.812 49.7504 120.296 48.1752 116.502 47.1061C113.123 46.1541 109.698 45.3293 106.333 44.6547C102.846 43.9486 99.5451 43.1838 96.5185 42.382C94.2782 41.7888 92.5073 40.9183 91.253 39.7919C91.1688 39.7162 91.0946 39.639 91.0903 39.6347C90.1343 38.6499 89.7461 36.6416 89.7461 36.6402C89.5949 35.864 89.3337 34.5147 89.7076 32.828C90.3497 29.9378 92.3689 28.2826 93.1152 27.6894C94.8119 26.3386 96.567 25.8426 97.6215 25.6411H155.836V106.198H175.033V25.644H202.578V6.41455H115.373H115.372Z" fill="white"/>
+                            <path d="M263.999 65.7937L264.126 57.4862L244.548 68.8083L224.803 56.9845L244.548 45.1607L259.267 53.6726L265.056 48.787L251.541 40.9711L263.208 33.9844L263.319 25.6111L248.142 34.7005V18.7029L241.024 22.192V38.9629L221.13 50.8767V30.9941L236.842 19.6134V10.7141L221.13 22.0948V3.83594H214.012V110.492H221.13V93.3392L233.326 102.108L237.585 96.3967L221.13 84.4399V63.0922L241.024 75.006V92.8304H248.142V79.2699L261.529 87.4259L265.182 81.3067L251.541 72.9978L263.999 65.7937Z" fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_69_236">
+                                <rect width="273.977" height="113.045" fill="white" transform="translate(0 0.641113)"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+
+                <!-- Main Heading -->
+                <h1 class="hero-title">INGENIERÍA, SERVICIO Y TECNOLOGÍA</h1>
+
+                <!-- Subheading -->
+                <p class="hero-subtitle">INSTALACIONES Y MONTAJES INDUSTRIALES</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Technology Section -->
+            <section class="tech-section">
+                <div class="tech-content">
+                    <div class="accent-line"></div>
+                    <div class="tech-text">
+                        <h2>Tecnología al servicio<br>de la excelencia</h2>
+                        <p>Somos tus aliados estratégicos<br>en tecnología industrial</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- What We Do Section -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h3 class="section-title">¿Qué hacemos?</h3>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="content-grid">
+                    <div class="content-text">
+                        <p>Te conectamos con soluciones integrales e innovadoras, combinando tecnología, conocimiento científico y un firme compromiso con la excelencia.</p>
+                        <p>Te acompañamos con propuestas pensadas para impulsar el crecimiento de tu empresa.</p>
+                    </div>
+                    <div>
+                        <img src="https://api.builder.io/api/v1/image/assets/TEMP/ea08a02156676be21914eede0f305526e456d598?width=2158" alt="Industrial equipment" class="content-image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- What We Offer Section -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h3 class="section-title">¿Qué ofrecemos?</h3>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="content-grid">
+                    <div class="content-text">
+                        <p>Máquinas, repuestos y líneas industriales completas, importadas, de primera calidad.</p>
+                        <p>Servicio técnico posventa y representación.</p>
+                        <p>Asesoramiento en ingeniería aplicada por parte de un equipo altamente calificado.</p>
+                    </div>
+                    <div>
+                        <img src="https://api.builder.io/api/v1/image/assets/TEMP/8516e4d4bc154ee91536334f9e00ba36946331d4?width=2157" alt="Industrial forklift operation" class="content-image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mission and Vision Section -->
+            <section class="mission-vision">
+                <!-- Mission -->
+                <div class="mission-card">
+                    <div class="card-header">
+                        <h4>MISIÓN</h4>
+                    </div>
+                    <div class="card-content">
+                        <p>Ser el aliado estratégico que brinda soluciones integrales que facilitan los procesos industriales, desde el proyecto hasta el servicio técnico posventa.</p>
+                    </div>
+                </div>
+
+                <!-- Vision -->
+                <div class="vision-card">
+                    <div class="card-header">
+                        <h4>VISIÓN</h4>
+                    </div>
+                    <div class="card-content">
+                        <p>Ser la principal referencia de innovación y confiabilidad, a través de la calidad y el compromiso.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Values Section -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h3 class="section-title">Valores</h3>
+                    <div class="title-underline half"></div>
+                </div>
+
+                <div class="values-grid">
+                    <div class="value-item">
+                        <svg class="value-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.1333 27.7863L8.10999 17.7259L12.6381 13.1799L17.7314 18.2931L33.1035 0L38 4.14473L18.1333 27.7863Z" fill="#B68936"/>
+                            <path d="M29.2306 18.1414V33.8695H4.11778V8.66923H22.8268L26.2977 4.53711H0V38.0016H33.3484V13.2425L29.2306 18.1414Z" fill="#B68936"/>
+                        </svg>
+                        <p class="value-text">Compromiso serio.</p>
+                    </div>
+
+                    <div class="value-item">
+                        <svg class="value-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.1333 27.7863L8.10999 17.7259L12.6381 13.1799L17.7314 18.2931L33.1035 0L38 4.14473L18.1333 27.7863Z" fill="#B68936"/>
+                            <path d="M29.2306 18.1414V33.8695H4.11778V8.66923H22.8268L26.2977 4.53711H0V38.0016H33.3484V13.2425L29.2306 18.1414Z" fill="#B68936"/>
+                        </svg>
+                        <p class="value-text">Calidad de servicio.</p>
+                    </div>
+
+                    <div class="value-item">
+                        <svg class="value-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.1333 27.7863L8.10999 17.7259L12.6381 13.1799L17.7314 18.2931L33.1035 0L38 4.14473L18.1333 27.7863Z" fill="#B68936"/>
+                            <path d="M29.2306 18.1414V33.8695H4.11778V8.66923H22.8268L26.2977 4.53711H0V38.0016H33.3484V13.2425L29.2306 18.1414Z" fill="#B68936"/>
+                        </svg>
+                        <p class="value-text">Capacitación constante.</p>
+                    </div>
+
+                    <div class="value-item">
+                        <svg class="value-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.1333 27.7863L8.10999 17.7259L12.6381 13.1799L17.7314 18.2931L33.1035 0L38 4.14473L18.1333 27.7863Z" fill="#B68936"/>
+                            <path d="M29.2306 18.1414V33.8695H4.11778V8.66923H22.8268L26.2977 4.53711H0V38.0016H33.3484V13.2425L29.2306 18.1414Z" fill="#B68936"/>
+                        </svg>
+                        <p class="value-text">Compañerismo.</p>
+                    </div>
+
+                    <div class="value-item">
+                        <svg class="value-icon" viewBox="0 0 38 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.1333 27.0551L8.10995 17.2594L12.6381 12.8331L17.7314 17.8117L33.1035 0L38 4.03566L18.1333 27.0551Z" fill="#B68936"/>
+                            <path d="M29.2306 17.6643V32.9785H4.11778V8.44135H22.8268L26.2977 4.41797H0V37.0019H33.3484V12.8943L29.2306 17.6643Z" fill="#B68936"/>
+                        </svg>
+                        <p class="value-text">Confiabilidad.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Logo -->
+                <div class="footer-logo">
+                    <svg width="182" height="75" viewBox="0 0 182 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_8_97)">
+                            <path d="M75.5251 1.82324H62.9466V1.84343C58.8957 2.22232 52.845 3.46771 47.5728 7.61536C45.1503 9.5207 43.9989 11.1667 43.6835 11.6341C40.7794 15.9246 40.7949 20.445 40.8042 23.3379C40.8135 26.1672 40.8586 29.9826 43.1599 34.0976C44.7417 36.9253 46.8891 39.1382 49.5415 40.6708C51.9065 42.0373 54.5216 43.0529 57.3124 43.688C59.7783 44.2486 62.2567 44.7424 64.7025 45.1601C66.9665 45.5328 69.0688 46.0079 70.9459 46.5732C72.206 46.9521 73.3357 47.3263 74.2152 48.3729C75.0139 49.3217 75.2501 50.387 75.3666 50.9227C75.6603 52.2535 75.5297 53.5144 75.2858 54.3281C74.6409 56.4803 72.3987 58.1869 69.5381 58.7786H21.8534V15.4184H30.1044V1.82324H0V15.4184H8.25097V58.777H0.53608V72.3722H72.5696C72.8058 72.3427 73.042 72.3116 73.2782 72.2821C73.4289 72.234 73.5797 72.1874 73.7304 72.1393C77.8574 71.2371 81.3707 69.6656 84.2236 67.4264C89.2751 63.4604 91.8359 57.8624 91.8359 50.7845V50.6975C91.8359 46.6105 91.0994 43.16 89.6465 40.4394C88.1843 37.7033 86.1938 35.5045 83.7279 33.9051C81.5043 32.464 79.0135 31.3491 76.3238 30.5928C73.9293 29.9205 71.5022 29.3366 69.117 28.8599C66.6464 28.3614 64.3063 27.8195 62.1619 27.2527C60.5755 26.8334 59.3199 26.2169 58.4311 25.4219C58.3721 25.3675 58.3193 25.3132 58.3161 25.3101C57.6387 24.6144 57.3636 23.1935 57.3636 23.1935C57.2564 22.6454 57.0715 21.6904 57.3372 20.4993C57.7925 18.4558 59.2236 17.2865 59.7519 16.8657C60.9546 15.9107 62.1977 15.5597 62.9451 15.4184H104.198V72.3706H117.802V15.4184H137.322V1.82324H75.5235H75.5251Z" fill="white"/>
+                            <path d="M180.848 43.8043L180.939 37.9314L167.066 45.9363L153.073 37.5758L167.066 29.2168L177.497 35.2341L181.599 31.7806L172.023 26.2555L180.289 21.3144L180.368 15.3949L169.613 21.8206V10.5112L164.569 12.9787V24.8347L150.471 33.2573V19.201L161.605 11.1541V4.86196L150.471 12.9088V0H145.427V75.4062H150.471V63.2785L159.113 69.479L162.132 65.4401L150.471 56.9864V41.8943L164.569 50.3169V62.9198H169.613V53.331L179.099 59.0983L181.688 54.772L172.023 48.8976L180.848 43.8043Z" fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_8_97">
+                                <rect width="181.688" height="75.4062" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <img src="https://api.builder.io/api/v1/image/assets/TEMP/ba64c74f9bc67e8885ff4ff8270f5742e8670ef3?width=550" alt="Industrial equipment" />
+                </div>
+
+                <!-- Social Media Icons -->
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 11.5C21.0034 12.8199 20.6951 14.1219 20.1 15.3C19.3944 16.7118 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0035 9.87812 19.6951 8.7 19.1L3 21L4.9 15.3C4.30493 14.1219 3.99656 12.8199 4 11.5C4.00061 9.92179 4.44061 8.37488 5.27072 7.03258C6.10083 5.69028 7.28825 4.60568 8.7 3.9C9.87812 3.30493 11.1801 2.99656 12.5 3H13C15.0843 3.11499 17.053 3.99476 18.5291 5.47085C20.0052 6.94694 20.885 8.91565 21 11V11.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-menu .nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileMenu').classList.remove('active');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
