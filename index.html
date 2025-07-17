@@ -201,7 +201,7 @@
 
         /* Technology Section */
         .tech-section {
-            margin-bottom: 80px;
+            margin-bottom: 160px;
         }
 
         .tech-content {
@@ -263,14 +263,18 @@
 
         /* Content Sections */
         .content-section {
-            margin-bottom: 80px;
+            margin-bottom: 160px;
         }
 
         .content-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 70px;
+            gap: 75px;
             align-items: center;
+        }
+
+        .content-grid.about{ 
+            gap: 150px;
         }
 
         .content-text {
@@ -292,12 +296,21 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 
+        .img-fullwidth {
+            padding: 80px 0 0;
+            margin: 0 -24px 0;
+        }
+
+        .img-fullwidth img {
+            border-radius: 8px;
+        }
+
         /* Mission and Vision */
         .mission-vision {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 200px;
-            margin-bottom: 80px;
+            margin-bottom: 160px;
         }
 
         .mission-card, .vision-card {
@@ -364,6 +377,7 @@
             align-items: center;
             flex-wrap: wrap;
             gap: 24px;
+            margin: 8px;
         }
 
         .footer-logo {
@@ -372,29 +386,22 @@
             gap: 8px;
         }
 
-        .footer-logo svg {
-            width: 128px;
-            height: auto;
-        }
-
         .footer-logo img {
-            width: 128px;
+            width: 480px;
             height: auto;
         }
 
         .social-links {
             display: flex;
-            gap: 24px;
+            gap: 90px;
         }
 
         .social-link {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 48px;
-            height: 48px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
+            width: 80px;
+            height: auto;
             color: white;
             text-decoration: none;
             transition: background-color 0.15s ease;
@@ -682,14 +689,17 @@
                     <div class="title-underline"></div>
                 </div>
 
-                <div class="content-grid">
+                <div class="content-grid about">
                     <div class="content-text">
                         <p>Te conectamos con soluciones integrales e innovadoras, combinando tecnología, conocimiento científico y un firme compromiso con la excelencia.</p>
+                        
+                    </div>
+                    <div class="content-text">
                         <p>Te acompañamos con propuestas pensadas para impulsar el crecimiento de tu empresa.</p>
                     </div>
-                    <div>
+                </div>
+                <div class="img-fullwidth">
                         <img src="https://api.builder.io/api/v1/image/assets/TEMP/ea08a02156676be21914eede0f305526e456d598?width=2158" alt="Industrial equipment" class="content-image">
-                    </div>
                 </div>
             </section>
 
@@ -793,37 +803,19 @@
             <div class="footer-content">
                 <!-- Logo -->
                 <div class="footer-logo">
-                    <svg width="182" height="75" viewBox="0 0 182 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_8_97)">
-                            <path d="M75.5251 1.82324H62.9466V1.84343C58.8957 2.22232 52.845 3.46771 47.5728 7.61536C45.1503 9.5207 43.9989 11.1667 43.6835 11.6341C40.7794 15.9246 40.7949 20.445 40.8042 23.3379C40.8135 26.1672 40.8586 29.9826 43.1599 34.0976C44.7417 36.9253 46.8891 39.1382 49.5415 40.6708C51.9065 42.0373 54.5216 43.0529 57.3124 43.688C59.7783 44.2486 62.2567 44.7424 64.7025 45.1601C66.9665 45.5328 69.0688 46.0079 70.9459 46.5732C72.206 46.9521 73.3357 47.3263 74.2152 48.3729C75.0139 49.3217 75.2501 50.387 75.3666 50.9227C75.6603 52.2535 75.5297 53.5144 75.2858 54.3281C74.6409 56.4803 72.3987 58.1869 69.5381 58.7786H21.8534V15.4184H30.1044V1.82324H0V15.4184H8.25097V58.777H0.53608V72.3722H72.5696C72.8058 72.3427 73.042 72.3116 73.2782 72.2821C73.4289 72.234 73.5797 72.1874 73.7304 72.1393C77.8574 71.2371 81.3707 69.6656 84.2236 67.4264C89.2751 63.4604 91.8359 57.8624 91.8359 50.7845V50.6975C91.8359 46.6105 91.0994 43.16 89.6465 40.4394C88.1843 37.7033 86.1938 35.5045 83.7279 33.9051C81.5043 32.464 79.0135 31.3491 76.3238 30.5928C73.9293 29.9205 71.5022 29.3366 69.117 28.8599C66.6464 28.3614 64.3063 27.8195 62.1619 27.2527C60.5755 26.8334 59.3199 26.2169 58.4311 25.4219C58.3721 25.3675 58.3193 25.3132 58.3161 25.3101C57.6387 24.6144 57.3636 23.1935 57.3636 23.1935C57.2564 22.6454 57.0715 21.6904 57.3372 20.4993C57.7925 18.4558 59.2236 17.2865 59.7519 16.8657C60.9546 15.9107 62.1977 15.5597 62.9451 15.4184H104.198V72.3706H117.802V15.4184H137.322V1.82324H75.5235H75.5251Z" fill="white"/>
-                            <path d="M180.848 43.8043L180.939 37.9314L167.066 45.9363L153.073 37.5758L167.066 29.2168L177.497 35.2341L181.599 31.7806L172.023 26.2555L180.289 21.3144L180.368 15.3949L169.613 21.8206V10.5112L164.569 12.9787V24.8347L150.471 33.2573V19.201L161.605 11.1541V4.86196L150.471 12.9088V0H145.427V75.4062H150.471V63.2785L159.113 69.479L162.132 65.4401L150.471 56.9864V41.8943L164.569 50.3169V62.9198H169.613V53.331L179.099 59.0983L181.688 54.772L172.023 48.8976L180.848 43.8043Z" fill="white"/>
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_8_97">
-                                <rect width="181.688" height="75.4062" fill="white"/>
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    <img src="https://api.builder.io/api/v1/image/assets/TEMP/ba64c74f9bc67e8885ff4ff8270f5742e8670ef3?width=550" alt="Industrial equipment" />
+                    <img src="assets/image/footer-logo.svg" alt="Industrial equipment" />
                 </div>
 
                 <!-- Social Media Icons -->
                 <div class="social-links">
                     <a href="#" class="social-link">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <img src="assets/image/footer-correo.svg" >
                     </a>
                     <a href="#" class="social-link">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21 11.5C21.0034 12.8199 20.6951 14.1219 20.1 15.3C19.3944 16.7118 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0035 9.87812 19.6951 8.7 19.1L3 21L4.9 15.3C4.30493 14.1219 3.99656 12.8199 4 11.5C4.00061 9.92179 4.44061 8.37488 5.27072 7.03258C6.10083 5.69028 7.28825 4.60568 8.7 3.9C9.87812 3.30493 11.1801 2.99656 12.5 3H13C15.0843 3.11499 17.053 3.99476 18.5291 5.47085C20.0052 6.94694 20.885 8.91565 21 11V11.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <img src="assets/image/footer-whatsapp.svg" >
                     </a>
                     <a href="#" class="social-link">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <img src="assets/image/footer-fb.svg" >
                     </a>
                 </div>
             </div>
