@@ -296,8 +296,6 @@
         .content-image {
             width: 100%;
             height: auto;
-            border-radius: 8px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 
         .img-fullwidth {
@@ -306,7 +304,12 @@
         }
 
         .img-fullwidth img {
-            border-radius: 8px;
+            border-radius: 0;
+        }
+
+        .img-holder {
+            margin: 0;
+            line-height: 1;
         }
 
         /* Mission and Vision */
@@ -639,6 +642,10 @@
                 line-height: 1.2;
             }
 
+            .content-text {
+                gap: 2rem;
+            }
+
             .content-text p {
                 font-size: 13px;
             }
@@ -783,7 +790,7 @@
                         <p>Servicio técnico posventa y representación.</p>
                         <p>Asesoramiento en ingeniería aplicada por parte de un equipo altamente calificado.</p>
                     </div>
-                    <div>
+                    <div class="img-holder">
                         <img src="https://api.builder.io/api/v1/image/assets/TEMP/8516e4d4bc154ee91536334f9e00ba36946331d4?width=2157" alt="Industrial forklift operation" class="content-image">
                     </div>
                 </div>
