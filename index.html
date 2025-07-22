@@ -33,9 +33,9 @@
             flex-direction: row;
             flex-wrap: wrap;
             align-items: center;
-            padding: 0 2rem 0 0;
             font-size: 2.15rem;
             gap: 1rem;
+            list-style-position: inside;
         }
 
         .container {
@@ -350,7 +350,6 @@
 
         .card-content p {
             font-size: 35px;
-            color: #374151;
             line-height: 1.7;
             text-align: left;
         }
@@ -378,7 +377,6 @@
         .value-text {
             line-height: 2;
             font-size: 35px;
-            color: #374151;
         }
 
         /* Footer */
@@ -393,8 +391,8 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 24px;
-            margin: 8px;
+            gap: 8rem;
+            margin: 1rem;
         }
 
         .footer-logo {
@@ -410,7 +408,7 @@
 
         .social-links {
             display: flex;
-            gap: 90px;
+            gap: 4rem;
         }
 
         .social-link {
@@ -422,6 +420,11 @@
             color: white;
             text-decoration: none;
             transition: background-color 0.15s ease;
+        }
+
+        .social-link img {
+            width: 4rem;
+            height: auto;
         }
 
         .social-link:hover {
@@ -587,7 +590,7 @@
                 gap: 50px;
             }
             .social-link img {
-                width: 40px;
+                width: 2.5rem;
                 height: auto;
             }
         }
@@ -688,6 +691,10 @@
             .value-text {
                 font-size: 13px;
                 line-height: 2;
+            }
+            .footer-content {
+                gap: 4rem;
+                margin: .5rem;
             }
         }
     </style>
