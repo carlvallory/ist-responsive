@@ -508,7 +508,16 @@ ul {
 
         form input {
             margin: 0 2rem;
+            padding: 2rem;
             width: -webkit-fill-available;
+            border-radius: 10px;
+        }
+
+        form textarea {
+            margin: 0 2rem;
+            padding: 2rem;
+            width: -webkit-fill-available;
+            border-radius: 10px;
         }
 
         /* Responsive Design */
