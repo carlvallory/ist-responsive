@@ -46,7 +46,7 @@ ul {
     position: absolute;
     inset: 0;
     background: linear-gradient(to right bottom, var(--ist-blue), #025C88, var(--ist-cyan));
-    background-image: url('assets/image/fondo_1.png');
+    background-image: url('../image/fondo_1.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
