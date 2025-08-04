@@ -441,6 +441,11 @@ ul {
         }
 
         /* Contactanos */
+        .contact-hero {
+            position: relative;
+            min-height: 80vh;
+            margin-bottom: 8rem;
+        }
         .contact-section {
             margin-bottom: 8rem;
         }
