@@ -509,16 +509,17 @@ ul {
 
         form label {
             margin-top: 1rem;
+            color: white;
         }
 
         form input {
-            padding: 2rem;
+            padding: 1rem;
             width: -webkit-fill-available;
             border-radius: 10px;
         }
 
         form textarea {
-            padding: 2rem;
+            padding: 1rem;
             width: -webkit-fill-available;
             border-radius: 10px;
         }
