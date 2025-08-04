@@ -442,14 +442,20 @@ ul {
 
         /* Contactanos */
         .breadcrumb {
+            display: flex;
             height: 35vh;
             color: white;
             font-size: 2rem;
             text-align: center;
             align-items: center;
+            justify-content: center;
             background-image: url('/assets/image/banner-contactos.png');
             background-repeat: no-repeat;
             background-size: cover;
+        }
+
+        .breadcrumb h1 {
+            display: flex;
         }
 
         /* Responsive Design */
