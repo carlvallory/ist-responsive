@@ -499,15 +499,11 @@ ul {
         }
 
         form {
-            display: flex;
-            align-items: center;
-            justify-self: center;
             background-color: #B58935;
             padding: 2rem;
         }
 
         form div {
-            display: flex;
             margin-top: 1rem;
         }
 
@@ -532,10 +528,12 @@ ul {
         }
 
         form button {
-            display: flex;
+            display: block;
+            margin: 0 auto;
             color: white;
             background-color: #024F7C;
-
+            border: none;
+            padding: 1rem;
         }
 
         .flex-container {
