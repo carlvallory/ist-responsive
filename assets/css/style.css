@@ -490,10 +490,11 @@ ul {
         }
 
         h5 {
+            font-family: 'Montserrat', sans-serif;
             color: #000000 !important;
-            font-size: 2rem !important;
-            font-weight: normal !important;
-            text-transform: capitalize !important;
+            font-size: 2rem;
+            font-weight: normal;
+            text-transform: capitalize;
         }
 
         form {
