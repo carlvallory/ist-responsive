@@ -449,7 +449,7 @@ ul {
             align-items: center;
             background-image: url('/assets/image/banner-contactos.png');
             background-repeat: no-repeat;
-            background-size: contain;
+            background-size: cover;
         }
 
         /* Responsive Design */
