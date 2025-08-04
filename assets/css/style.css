@@ -535,6 +535,17 @@ ul {
             grid-template-columns: 1fr;
         }
 
+        .content-grid.contact h4 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            line-height: 1.25;
+            background: linear-gradient(to right, var(--ist-cyan), var(--ist-blue));
+            border-radius: 8px;
+            padding: .5rem 2rem;
+            text-align: center;
+        }
+
         /* Responsive Design */
         @media (max-width: 1024px) {
             .nav-menu {
