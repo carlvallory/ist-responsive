@@ -489,6 +489,10 @@ ul {
             display: flex;
         }
 
+        form {
+            background-color: #B58935;
+        }
+
         /* Responsive Design */
         @media (max-width: 1024px) {
             .nav-menu {
