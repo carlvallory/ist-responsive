@@ -443,7 +443,7 @@ ul {
         /* Contactanos */
         .contact-hero {
             position: relative;
-            min-height: 80vh;
+            min-height: 40vh;
             margin-bottom: 8rem;
         }
         .contact-section {
