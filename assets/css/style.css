@@ -441,7 +441,7 @@ ul {
         }
 
         /* Contactanos */
-        .breacrumb {
+        .breadcrumb {
             position: relative;
             height: 20vh;
             left: 50%;
@@ -449,6 +449,9 @@ ul {
             margin-left: -50vw;
             margin-right: -50vw;
             color: white;
+            font-size: 2rem;
+            text-align: center;
+            align-items: center;
         }
 
         /* Responsive Design */
