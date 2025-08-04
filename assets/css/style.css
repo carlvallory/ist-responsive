@@ -490,8 +490,8 @@ ul {
         }
 
         h5 {
-            color: #000000;
-            font-size: 1rem;
+            color: #000000 !important;
+            font-size: 2rem !important;
         }
 
         form {
