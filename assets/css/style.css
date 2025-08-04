@@ -495,10 +495,20 @@ ul {
             font-size: 2rem !important;
             font-weight: normal !important;
             text-transform: capitalize;
+            line-height: 2 !important;
         }
 
         form {
             background-color: #B58935;
+        }
+
+        form label {
+            margin: 0 1rem;
+        }
+
+        form input {
+            margin: 1rem 1rem;
+            width: 100%;
         }
 
         /* Responsive Design */
