@@ -443,7 +443,7 @@ ul {
         /* Contactanos */
         .breadcrumb {
             position: relative;
-            height: 20vh;
+            height: 30vh;
             left: 50%;
             right: 50%;
             margin-left: -50vw;
@@ -452,6 +452,9 @@ ul {
             font-size: 2rem;
             text-align: center;
             align-items: center;
+            background-image: url('/assets/image/banner-contactos.png');
+            background-repeat: no-repeat;
+            background-size: contain;
         }
 
         /* Responsive Design */
