@@ -442,12 +442,7 @@ ul {
 
         /* Contactanos */
         .breadcrumb {
-            position: relative;
-            height: 30vh;
-            left: 50%;
-            right: 50%;
-            margin-left: -50vw;
-            margin-right: -50vw;
+            height: 35vh;
             color: white;
             font-size: 2rem;
             text-align: center;
