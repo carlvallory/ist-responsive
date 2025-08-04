@@ -489,6 +489,11 @@ ul {
             display: flex;
         }
 
+        h5 {
+            color: #000000;
+            font-size: 1rem;
+        }
+
         form {
             background-color: #B58935;
         }
