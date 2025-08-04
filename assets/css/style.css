@@ -500,21 +500,24 @@ ul {
 
         form {
             background-color: #B58935;
+            padding: 2rem;
+        }
+
+        form div {
+            margin-top: 1rem;
         }
 
         form label {
-            margin: 0 2rem;
+            margin-top: 1rem;
         }
 
         form input {
-            margin: 0 2rem;
             padding: 2rem;
             width: -webkit-fill-available;
             border-radius: 10px;
         }
 
         form textarea {
-            margin: 0 2rem;
             padding: 2rem;
             width: -webkit-fill-available;
             border-radius: 10px;
