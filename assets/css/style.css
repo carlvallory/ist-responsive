@@ -102,6 +102,10 @@ ul {
     border-radius: 8px;
 }
 
+.nav-link.color-gold:hover {
+    color: white;
+}
+
 .nav-link.active {
     background: var(--ist-gold);
     padding: 8px 24px;
