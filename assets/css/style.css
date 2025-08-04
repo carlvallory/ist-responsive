@@ -441,11 +441,37 @@ ul {
         }
 
         /* Contactanos */
+        .contact-section {
+            margin-bottom: 8rem;
+        }
+
+        .contact-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-content.accent-line {
+            width: 14px;
+            height: 530px;
+            background: var(--ist-gold);
+            border-radius: 9px;
+            flex-shrink: 0;
+        }
+
+        .contact-text p {
+            font-size: 75px;
+            color: var(--ist-blue);
+            line-height: 1.2;
+        }
+
         .breadcrumb {
             display: flex;
             height: 35vh;
             color: white;
-            font-size: 2rem;
+            font-size: 3rem;
             text-align: center;
             align-items: center;
             justify-content: center;
