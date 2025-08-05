@@ -1,153 +1,201 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>IST - Servicios</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IST - Servicios de Ingeniería Industrial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Estilos específicos para servicios */
+        .service-card {
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .service-card h3 {
+            color: var(--ist-blue);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-family: 'Bebas Neue', sans-serif;
+        }
+        
+        .service-card h4 {
+            color: var(--ist-gold);
+            font-size: 1.5rem;
+            margin: 1.5rem 0 1rem;
+        }
+        
+        .service-card p {
+            line-height: 1.6;
+        }
+        
+        .service-divider {
+            height: 2px;
+            background: linear-gradient(to right, var(--ist-cyan), var(--ist-blue));
+            margin: 2rem 0;
+            border: none;
+        }
+        
+        @media (max-width: 768px) {
+            .service-card {
+                padding: 1.5rem;
+            }
+            
+            .service-card h3 {
+                font-size: 1.5rem;
+            }
+            
+            .service-card h4 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- Hero Section -->
-  <section class="contact-hero">
-    <!-- Navigation -->
-    <nav class="nav">
-      <div class="container">
-        <div class="nav-container">
-          <div class="nav-menu">
-            <a href="#" class="nav-link color-gold">PRODUCTOS</a>
-            <a href="#" class="nav-link color-gold active">SERVICIOS</a>
-            <a href="index.html" class="nav-link color-gold">NOSOTROS</a>
-            <a href="contact.html" class="nav-link color-gold">CONTACTO</a>
-          </div>
+    <!-- Hero Section -->
+    <section class="services-hero">
+        <!-- Desktop Navigation -->
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-container">
+                    <div class="nav-menu">
+                        <a href="#" class="nav-link color-gold">PRODUCTOS</a>
+                        <a href="services.html" class="nav-link color-gold active">SERVICIOS</a>
+                        <a href="index.html" class="nav-link color-gold">NOSOTROS</a>
+                        <a href="contact.html" class="nav-link color-gold">CONTACTO</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#" class="nav-link">PRODUCTOS</a>
+            <a href="services.html" class="nav-link active">SERVICIOS</a>
+            <a href="index.html" class="nav-link">NOSOTROS</a>
+            <a href="contact.html" class="nav-link">CONTACTO</a>
         </div>
-      </div>
-    </nav>
 
-    <!-- Mobile Menu Button -->
-    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </button>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#" class="nav-link">PRODUCTOS</a>
-      <a href="#" class="nav-link active">SERVICIOS</a>
-      <a href="index.html" class="nav-link">NOSOTROS</a>
-      <a href="contact.html" class="nav-link">CONTACTO</a>
-    </div>
-
-    <!-- Breadcrumb -->
-    <section class="breadcrumb">
-      <h1>SERVICIOS</h1>
+        <!-- Breadcrumb -->
+        <section class="breadcrumb">
+            <h1>SERVICIOS</h1>
+        </section>
     </section>
-  </section>
 
-  <!-- Main Content -->
-  <main class="main-content">
-    <div class="container">
-      <!-- Intro -->
-      <section class="contact-section">
-        <div class="contact-content">
-          <div class="accent-line"></div>
-          <div class="contact-text">
-            <p>Brindamos soluciones integrales en servicios industriales para optimizar procesos, reducir costos y mejorar el rendimiento de tu empresa.</p>
-          </div>
-        </div>
-      </section>
+    <!-- Main Content Section -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Services Content -->
+            <section class="content-section">
+                <div class="service-card">
+                    <h3>ATENCIÓN POSVENTA</h3>
+                    <p><strong>Nuestro servicio de atención posventa</strong>, a través del seguimiento, asegura el correcto funcionamiento de la línea de equipos instalados y la satisfacción del cliente.</p>
+                    <p>Ofrecemos soporte técnico capacitado, para resolver cualquier duda o inconveniente que pueda surgir luego de la instalación, garantizando que cada equipo mantenga un rendimiento óptimo.</p>
+                </div>
 
-      <!-- Servicio 1 -->
-      <section class="content-section">
-        <div class="section-header">
-          <h3 class="section-title">Mantenimiento Integral</h3>
-          <div class="title-underline half"></div>
-        </div>
-        <div class="content-grid">
-          <div class="content-text">
-            <p>Planes de mantenimiento preventivo, correctivo y predictivo adaptados a cada industria.</p>
-          </div>
-          <div class="img-holder">
-            <img src="assets/image/servicio-mantenimiento.jpg" alt="Mantenimiento" class="content-image"/>
-          </div>
-        </div>
-      </section>
+                <div class="service-card">
+                    <h3>MANTENIMIENTO</h3>
+                    
+                    <h4>PREVENTIVO</h4>
+                    <p>El servicio de mantenimiento preventivo está preparado para evitar fallas y prolongar la vida útil de los equipos. Realizamos inspecciones y ajustes periódicos para asegurar que todo opere de manera correcta, eficiente y así evitar posibles problemas que puedan implicar un mayor daño.</p>
+                    
+                    <h4>CORRECTIVO</h4>
+                    <p>Este servicio se orienta a solucionar fallas imprevistas en los equipos. Nuestro equipo técnico especializado actuará con rapidez para diagnosticar y reparar cualquier inconveniente, minimizando el tiempo de espera para el retorno normal a las actividades de la empresa.</p>
+                    
+                    <h4>GARANTÍA</h4>
+                    <p>La garantía de los servicios tiene una duración de 3 meses. Esto significa que si surge dentro de este periodo algún problema que tenga relación con el servicio realizado, nos encargaremos de solucionarlo.</p>
+                </div>
+            </section>
 
-      <!-- Servicio 2 -->
-      <section class="content-section">
-        <div class="section-header">
-          <h3 class="section-title">Montajes y Puestas en Marcha</h3>
-          <div class="title-underline half"></div>
-        </div>
-        <div class="content-grid">
-          <div class="content-text">
-            <p>Instalaciones electromecánicas, ensamblajes y pruebas funcionales para líneas de producción.</p>
-          </div>
-          <div class="img-holder">
-            <img src="assets/image/servicio-montaje.jpg" alt="Montaje" class="content-image"/>
-          </div>
-        </div>
-      </section>
+            <!-- Additional Services Section -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h3 class="section-title">Otros Servicios</h3>
+                    <div class="title-underline"></div>
+                </div>
 
-      <!-- Servicio 3 -->
-      <section class="content-section">
-        <div class="section-header">
-          <h3 class="section-title">Automatización Industrial</h3>
-          <div class="title-underline half"></div>
+                <div class="content-grid">
+                    <div class="content-text">
+                        <ul>
+                            <li>Instalación y puesta en marcha de equipos industriales</li>
+                            <li>Asesoramiento técnico especializado</li>
+                            <li>Capacitación para el personal operativo</li>
+                        </ul>
+                    </div>
+                    <div class="content-text">
+                        <ul>
+                            <li>Modernización de líneas de producción</li>
+                            <li>Automatización de procesos</li>
+                            <li>Diagnóstico técnico de equipos</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
         </div>
-        <div class="content-grid">
-          <div class="content-text">
-            <p>Soluciones en control automático, PLCs, sensores, sistemas SCADA y eficiencia energética.</p>
-          </div>
-          <div class="img-holder">
-            <img src="assets/image/servicio-automatizacion.jpg" alt="Automatización" class="content-image"/>
-          </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Logo -->
+                <div class="footer-logo">
+                    <img src="assets/image/footer-logo.svg" alt="IST Ingeniería, Servicio y Tecnología">
+                </div>
+
+                <!-- Social Media Icons -->
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <img src="assets/image/social-email.svg" alt="Email">
+                    </a>
+                    <a href="#" class="social-link">
+                        <img src="assets/image/social-whats-app.svg" alt="WhatsApp">
+                    </a>
+                    <a href="#" class="social-link">
+                        <img src="assets/image/social-facebook.svg" alt="Facebook">
+                    </a>
+                </div>
+            </div>
         </div>
-      </section>
-    </div>
-  </main>
+    </footer>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <img src="assets/image/footer-logo.svg" alt="Logo footer" />
-        </div>
-        <div class="social-links">
-          <a href="#" class="social-link"><img src="assets/image/social-email.svg" /></a>
-          <a href="#" class="social-link"><img src="assets/image/social-whats-app.svg" /></a>
-          <a href="#" class="social-link"><img src="assets/image/social-facebook.svg" /></a>
-        </div>
-      </div>
-    </div>
-  </footer>
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
 
-  <script>
-    function toggleMobileMenu() {
-      const mobileMenu = document.getElementById('mobileMenu');
-      mobileMenu.classList.toggle('active');
-    }
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-menu .nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileMenu').classList.remove('active');
+            });
+        });
 
-    document.querySelectorAll('.mobile-menu .nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('mobileMenu').classList.remove('active');
-      });
-    });
-
-    document.addEventListener('click', (e) => {
-      const mobileMenu = document.getElementById('mobileMenu');
-      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-
-      if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-        mobileMenu.classList.remove('active');
-      }
-    });
-  </script>
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
