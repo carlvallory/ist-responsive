@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IST - Servicios</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <!-- Background -->
+    <div class="hero-background">
+      <div class="hero-pattern"></div>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="nav">
+      <div class="container">
+        <div class="nav-container">
+          <div class="nav-menu">
+            <a href="#" class="nav-link">PRODUCTOS</a>
+            <a href="#" class="nav-link active">SERVICIOS</a>
+            <a href="index.html" class="nav-link">NOSOTROS</a>
+            <a href="contact.html" class="nav-link">CONTACTO</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#" class="nav-link">PRODUCTOS</a>
+      <a href="#" class="nav-link active">SERVICIOS</a>
+      <a href="index.html" class="nav-link">NOSOTROS</a>
+      <a href="contact.html" class="nav-link">CONTACTO</a>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <div class="container">
+        <div class="logo">
+          <!-- Aquí puedes reutilizar el SVG del logo de index.html -->
+          <img src="assets/image/footer-logo.svg" alt="IST Logo" style="width: 200px;">
+        </div>
+        <h1 class="hero-title">SERVICIOS INDUSTRIALES</h1>
+        <p class="hero-subtitle">SOLUCIONES COMPLETAS PARA TU EMPRESA</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+
+      <!-- Servicio 1 -->
+      <section class="content-section">
+        <div class="section-header">
+          <h3 class="section-title">Mantenimiento Industrial</h3>
+          <div class="title-underline half"></div>
+        </div>
+        <div class="content-grid">
+          <div class="content-text">
+            <p>Ofrecemos mantenimiento preventivo, correctivo y predictivo para asegurar el funcionamiento continuo de tus equipos.</p>
+          </div>
+          <div class="img-holder">
+            <img src="assets/image/servicio-mantenimiento.jpg" alt="Mantenimiento" class="content-image" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Servicio 2 -->
+      <section class="content-section">
+        <div class="section-header">
+          <h3 class="section-title">Montajes Electromecánicos</h3>
+          <div class="title-underline half"></div>
+        </div>
+        <div class="content-grid">
+          <div class="content-text">
+            <p>Realizamos proyectos de montajes industriales con precisión, planificación y calidad técnica certificada.</p>
+          </div>
+          <div class="img-holder">
+            <img src="assets/image/servicio-montaje.jpg" alt="Montajes" class="content-image" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Servicio 3 -->
+      <section class="content-section">
+        <div class="section-header">
+          <h3 class="section-title">Automatización y Control</h3>
+          <div class="title-underline half"></div>
+        </div>
+        <div class="content-grid">
+          <div class="content-text">
+            <p>Integramos soluciones de automatización que optimizan los procesos, aumentando la eficiencia y productividad.</p>
+          </div>
+          <div class="img-holder">
+            <img src="assets/image/servicio-automatizacion.jpg" alt="Automatización" class="content-image" />
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="assets/image/footer-logo.svg" alt="Logo footer" />
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-link"><img src="assets/image/social-email.svg" /></a>
+          <a href="#" class="social-link"><img src="assets/image/social-whats-app.svg" /></a>
+          <a href="#" class="social-link"><img src="assets/image/social-facebook.svg" /></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.toggle('active');
+    }
+
+    document.querySelectorAll('.mobile-menu .nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('mobileMenu').classList.remove('active');
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      const mobileMenu = document.getElementById('mobileMenu');
+      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+
+      if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+        mobileMenu.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
