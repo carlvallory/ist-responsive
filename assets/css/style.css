@@ -476,7 +476,6 @@ ul {
             display: flex;
             height: 30vh;
             color: white;
-            font-size: 3rem;
             text-align: center;
             align-items: center;
             justify-content: center;
@@ -487,6 +486,12 @@ ul {
 
         .breadcrumb h1 {
             display: flex;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
+        }
+
+        h2.section-title { 
+            font-size: 3rem;
         }
 
         h5 {
