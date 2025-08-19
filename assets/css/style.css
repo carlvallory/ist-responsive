@@ -582,6 +582,7 @@ ul {
         .column-item-2 {
             grid-column-start: 4;
             grid-column-end: 6;
+            align-self: flex-end;
         }
 
         .column-item-3 {
