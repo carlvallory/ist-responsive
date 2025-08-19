@@ -602,8 +602,8 @@ ul {
             line-height: 1.25;
             background: linear-gradient(to right, var(--ist-cyan), var(--ist-blue));
             border-radius: 8px;
-            padding: 0 1rem;
-            margin: 0 4rem;
+            padding: 1rem 3rem;
+            width: fit-content;
             text-align: center;
         }
 
