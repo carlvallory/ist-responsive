@@ -711,6 +711,27 @@ ul {
                 grid-template-columns: 1fr;
             }
 
+            .column-item-1 {
+                grid-column-start: 1;
+                grid-column-end: 1;
+            }
+
+            .column-item-2 {
+                grid-column-start: 1;
+                grid-column-end: 1;
+                align-self: flex-end;
+            }
+
+            .column-item-3 {
+                grid-column-start: 1;
+                grid-column-end: 1;
+            }
+
+            .column-item-4 {
+                grid-column-start: 1;
+                grid-column-end: 1;
+            }
+
             .content-text {
                 gap: 24px;
             }
