@@ -571,7 +571,7 @@ ul {
         }
 
         .content-grid.service {
-
+            grid-template-columns: auto auto auto auto auto auto;
         }
 
         .column-item-1 {
@@ -580,8 +580,8 @@ ul {
         }
 
         .column-item-2 {
-            grid-column-start: 1;
-            grid-column-end: 2;
+            grid-column-start: 4;
+            grid-column-end: 6;
         }
 
         .column-item-3 {
