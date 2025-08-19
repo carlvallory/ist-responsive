@@ -607,6 +607,10 @@ ul {
             text-align: center;
         }
 
+        .service .content-text p {
+            font-size: 2rem;
+        }
+
         /* Responsive Design */
         @media (max-width: 1024px) {
             .nav-menu {
