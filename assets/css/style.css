@@ -148,6 +148,10 @@ ul {
     transition: all 0.3s ease;
 }
 
+.hamburger.service span {
+    background: var(--ist-blue);
+ }
+
 .hamburger span:last-child {
     width: 24px;
 }
