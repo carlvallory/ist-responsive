@@ -595,6 +595,18 @@ ul {
             grid-column-end: 6;
         }
 
+        .content-grid.service h4 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            line-height: 1.25;
+            background: linear-gradient(to right, var(--ist-cyan), var(--ist-blue));
+            border-radius: 8px;
+            padding: 0 1rem;
+            margin: 0 4rem;
+            text-align: center;
+        }
+
         /* Responsive Design */
         @media (max-width: 1024px) {
             .nav-menu {
