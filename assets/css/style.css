@@ -474,6 +474,7 @@ ul {
 
         .breadcrumb {
             display: flex;
+            margin: 2rem 0 4rem;
             height: 30vh;
             color: white;
             text-align: center;
@@ -562,6 +563,11 @@ ul {
             padding: 0 1rem;
             margin: 0 4rem;
             text-align: center;
+        }
+
+        /* Servicio */
+        .blue-text {
+            color: var(--ist-blue);
         }
 
         /* Responsive Design */
