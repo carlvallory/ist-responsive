@@ -570,6 +570,30 @@ ul {
             color: var(--ist-blue);
         }
 
+        .content-grid.service {
+
+        }
+
+        .column-item-1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .column-item-2 {
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+
+        .column-item-3 {
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+
+        .column-item-4 {
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+
         /* Responsive Design */
         @media (max-width: 1024px) {
             .nav-menu {
