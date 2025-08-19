@@ -707,6 +707,10 @@ ul {
                 gap: 24px;
             }
 
+            .content-grid.service {
+                grid-template-columns: 1fr;
+            }
+
             .content-text {
                 gap: 24px;
             }
@@ -833,6 +837,9 @@ ul {
                 gap: 2rem;
             }
             .content-grid.about {
+                gap: 2rem;
+            }
+            .content-grid.service {
                 gap: 2rem;
             }
             .tech-text h2 {
