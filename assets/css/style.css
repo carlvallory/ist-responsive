@@ -150,7 +150,11 @@ ul {
 
 .hamburger.service span {
     background: var(--ist-blue);
- }
+}
+
+.mobile-menu-btn .hamburger.service {
+    background: white;
+}
 
 .hamburger span:last-child {
     width: 24px;
