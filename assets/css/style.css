@@ -152,7 +152,7 @@ ul {
     background: var(--ist-blue);
 }
 
-.mobile-menu-btn .hamburger.service.active span {
+.mobile-menu-btn.active .hamburger.service span {
     background: white;
 }
 
