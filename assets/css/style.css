@@ -818,6 +818,11 @@ ul {
                 width: 2.5rem;
                 height: auto;
             }
+
+            /* Services */
+            .service .content-text p {
+                font-size: 13px;
+            }
         }
 
         @media (max-width: 480px) {
