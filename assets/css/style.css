@@ -693,6 +693,10 @@ ul {
                 font-size: 16px;
             }
 
+            .breadcrumb {
+                height: 50vh;
+            }
+
             .tech-content {
                 gap: 1rem;
             }
