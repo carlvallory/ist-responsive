@@ -28,7 +28,7 @@
 
         <!-- Mobile Menu Button -->
         <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-            <div class="hamburger">
+            <div class="hamburger contact">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -189,6 +189,9 @@
         function toggleMobileMenu() {
             const mobileMenu = document.getElementById('mobileMenu');
             mobileMenu.classList.toggle('active');
+            document.querySelectorAll('.mobile-menu-btn').forEach(btn => {
+                btn.classList.toggle('active');
+            });
         }
 
         // Close mobile menu when clicking on a link

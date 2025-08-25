@@ -156,6 +156,14 @@ ul {
     background: white;
 }
 
+.hamburger.contact span {
+    background: var(--ist-blue);
+}
+
+.mobile-menu-btn.active .hamburger.contact span {
+    background: white;
+}
+
 .hamburger span:last-child {
     width: 24px;
 }
