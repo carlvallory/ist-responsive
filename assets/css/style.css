@@ -722,6 +722,8 @@ p {
             
             .mobile-menu-btn {
                 display: block;
+                top: 1rem;
+                right: 1rem;
             }
 
             .tech-text h2 {
