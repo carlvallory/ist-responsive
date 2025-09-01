@@ -412,6 +412,7 @@ p {
 
         .img-fullwidth {
             padding: 4rem 0 0;
+            margin: 0 -10%;
         }
 
         .img-fullwidth img {
